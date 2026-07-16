@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cerablus Coffee — H · Soft</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --pine:#0c3d26;--green:#006639;--gold:#cda05f;--mint:#e9f4ee;
+    --bg:#f7f5f0;--card:#fff;--ink:#14201a;--soft:#71776f;--line:#eceae3;
+    --f:"Manrope",sans-serif;--f-ar:"IBM Plex Sans Arabic",sans-serif;
+    --r:20px;--shadow:0 1px 2px rgba(20,32,26,.04),0 12px 32px rgba(20,32,26,.06);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--bg);color:var(--ink);font-family:var(--f-ar);line-height:1.65;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  .en{font-family:var(--f)}
+  .wrap{width:min(100% - 2.4rem,1160px);margin-inline:auto}
+
+  header{position:sticky;top:0;z-index:30;padding:.7rem 0}
+  .nav{display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,.75);backdrop-filter:blur(14px);border:1px solid var(--line);border-radius:100px;padding:.55rem .7rem .55rem 1.2rem;box-shadow:var(--shadow)}
+  .brand{display:flex;align-items:center;gap:.55rem}
+  .brand .cmark{height:26px;color:var(--pine)}
+  .brand b{font-family:var(--f);font-weight:700;letter-spacing:-.01em}
+  .navlinks{display:flex;gap:1.8rem;font-family:var(--f);font-weight:500;font-size:.9rem;color:var(--soft)}
+  .navlinks a:hover{color:var(--ink)}
+  .navbtn{background:var(--pine);color:#fff;font-family:var(--f-ar);font-weight:600;font-size:.88rem;padding:.6rem 1.3rem;border-radius:100px;transition:.2s}
+  .navbtn:hover{background:var(--green)}
+
+  /* hero */
+  .hero{text-align:center;padding:clamp(3rem,8vw,5.5rem) 0 clamp(2rem,5vw,3.5rem)}
+  .pill{display:inline-flex;align-items:center;gap:.5rem;background:var(--card);border:1px solid var(--line);border-radius:100px;padding:.4rem 1rem;font-family:var(--f);font-size:.82rem;color:var(--soft);box-shadow:var(--shadow);margin-bottom:1.8rem}
+  .pill .d{width:7px;height:7px;border-radius:50%;background:var(--green)}
+  .hero h1{font-family:var(--f);font-weight:800;font-size:clamp(2.6rem,7vw,5rem);line-height:1.02;letter-spacing:-.03em;margin-bottom:1.2rem}
+  .hero h1 .g{color:var(--green)}
+  .hero p{color:var(--soft);max-width:48ch;margin:0 auto 2rem;font-size:1.08rem}
+  .hero-actions{display:flex;gap:.7rem;justify-content:center;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--f-ar);font-weight:600;padding:.9rem 1.7rem;border-radius:100px;transition:.2s}
+  .btn.fill{background:var(--pine);color:#fff}.btn.fill:hover{background:var(--green)}
+  .btn.soft{background:var(--card);border:1px solid var(--line);box-shadow:var(--shadow)}.btn.soft:hover{border-color:var(--pine)}
+
+  /* featured cards */
+  .feat{padding:clamp(1.5rem,4vw,2.5rem) 0}
+  .fhead{display:flex;justify-content:space-between;align-items:end;margin-bottom:1.4rem;flex-wrap:wrap;gap:1rem}
+  .fhead h2{font-family:var(--f);font-weight:700;font-size:clamp(1.5rem,3.5vw,2.2rem);letter-spacing:-.02em}
+  .fhead a{font-family:var(--f);font-weight:500;color:var(--soft);font-size:.9rem}
+  .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:1rem}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);transition:transform .22s ease,box-shadow .22s ease}
+  .card:hover{transform:translateY(-4px);box-shadow:0 20px 44px rgba(20,32,26,.12)}
+  .card .ph{aspect-ratio:5/4;background:
+    radial-gradient(120% 120% at 70% 20%,rgba(205,160,95,.35),transparent 55%),
+    linear-gradient(160deg,var(--mint),#d5e6dc);
+    display:grid;place-items:center;font-size:2.4rem}
+  .card .b{padding:.9rem 1rem 1.1rem;display:flex;justify-content:space-between;align-items:center;gap:.5rem}
+  .card h3{font-family:var(--f);font-weight:600;font-size:1.02rem}
+  .card .ar{color:var(--soft);font-size:.8rem}
+  .card .pr{font-family:var(--f);font-weight:700;color:var(--green)}
+  .card .plus{width:32px;height:32px;border-radius:50%;background:var(--pine);color:#fff;display:grid;place-items:center;font-family:var(--f);font-weight:600;font-size:1.1rem;flex:none}
+
+  /* how it works */
+  .how{padding:clamp(2.5rem,6vw,4rem) 0}
+  .how-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+  .step{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:1.6rem;box-shadow:var(--shadow)}
+  .step .n{font-family:var(--f);font-weight:800;font-size:1rem;color:#fff;background:var(--gold);width:34px;height:34px;border-radius:50%;display:grid;place-items:center;margin-bottom:1rem}
+  .step h3{font-family:var(--f);font-weight:700;margin-bottom:.3rem}
+  .step p{color:var(--soft);font-size:.9rem}
+
+  /* cta */
+  .cta-band{background:var(--pine);border-radius:28px;padding:clamp(2.5rem,6vw,4.5rem);text-align:center;color:var(--mint);margin:1.5rem 0}
+  .cta-band .cmark{height:52px;color:var(--gold);margin:0 auto 1.3rem}
+  .cta-band h2{font-family:var(--f);font-weight:800;font-size:clamp(1.8rem,5vw,2.8rem);letter-spacing:-.02em;margin-bottom:1.4rem}
+  .cta-band .btn.gold{background:var(--gold);color:var(--pine)}
+
+  footer{padding:2.5rem 0;text-align:center;color:var(--soft);font-family:var(--f);font-size:.85rem}
+
+  @media(max-width:640px){.navlinks{display:none}.how-grid{grid-template-columns:1fr}}
+
+  .cmark{display:inline-flex;line-height:0}
+  .cmark svg{height:100%;width:auto;display:block}
+</style>
+</head>
+<body>
+<header><div class="wrap"><div class="nav">
+  <span class="brand"><span class="cmark"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 158.000000 229.000000" fill="currentColor" aria-hidden="true"><g transform="translate(0.000000,229.000000) scale(0.100000,-0.100000)"
+fill="currentColor" stroke="none">
+<path d="M992 2157 c-13 -7 -33 -28 -45 -47 -12 -19 -30 -45 -39 -59 -20 -30
+-38 -68 -38 -82 0 -5 -7 -9 -15 -9 -10 0 -15 -10 -15 -30 0 -17 -9 -48 -20
+-70 -18 -35 -23 -38 -52 -34 -57 7 -412 34 -457 34 -34 0 -49 -6 -72 -29 -25
+-26 -29 -37 -29 -85 0 -51 -2 -56 -25 -62 -48 -12 -65 -48 -65 -136 0 -92 9
+-115 55 -134 51 -21 1049 -21 1100 0 46 19 55 42 55 133 0 86 -13 117 -56 133
+-17 7 -24 17 -24 35 0 14 -10 36 -23 49 -25 25 -53 31 -199 42 -49 3 -88 10
+-88 15 0 5 7 9 15 9 9 0 20 11 25 25 5 14 14 25 20 25 5 0 10 9 10 19 0 10 6
+21 14 24 9 3 12 14 9 25 -3 12 1 22 11 25 9 4 16 16 16 27 0 11 6 20 13 20 7
+0 80 -43 162 -96 162 -104 182 -109 210 -54 24 46 19 67 -22 93 -79 49 -380
+207 -394 207 -8 -1 -24 -6 -37 -13z m226 -108 c92 -51 168 -93 170 -94 1 -1
+-5 -18 -15 -36 -10 -19 -19 -35 -20 -37 -1 -2 -62 35 -137 83 -85 55 -142 85
+-152 81 -8 -3 -28 1 -43 9 -42 21 -46 6 -9 -28 33 -30 33 -30 10 -40 -12 -6
+-22 -19 -22 -29 0 -18 -1 -19 -30 -2 -42 25 -51 8 -11 -23 42 -33 23 -49 -25
+-21 -27 16 -34 17 -34 6 0 -8 11 -21 25 -28 14 -7 25 -20 25 -28 0 -10 -8 -9
+-34 8 -40 24 -60 10 -22 -15 36 -24 24 -41 -24 -37 -22 2 -40 6 -40 8 0 3 9
+22 20 44 11 22 20 46 20 55 0 8 5 15 10 15 6 0 10 8 10 18 0 9 7 25 14 35 12
+15 18 16 35 8 11 -6 24 -11 30 -11 20 0 11 20 -14 32 -28 12 -33 36 -10 44 8
+3 23 21 34 40 15 25 27 34 46 34 14 0 101 -41 193 -91z m212 -142 c0 -13 -9
+-32 -20 -42 -18 -17 -20 -17 -26 -1 -4 10 -2 28 4 42 15 31 42 32 42 1z"/>
+<path d="M675 1299 c-126 -21 -235 -78 -331 -173 -113 -113 -164 -241 -164
+-411 0 -169 50 -295 164 -410 170 -172 440 -230 681 -147 86 30 203 104 231
+146 14 23 12 26 -51 86 -103 99 -100 98 -143 58 -78 -73 -165 -103 -276 -96
+-211 14 -346 172 -334 391 6 107 38 177 114 246 130 119 336 122 485 7 l57
+-44 83 79 84 79 -55 51 c-128 118 -342 172 -545 138z"/>
+<path d="M739 985 c-90 -33 -138 -86 -109 -120 17 -20 32 -19 81 7 116 60 234
+-8 232 -133 -2 -159 -212 -217 -304 -83 -32 47 -57 55 -83 28 -20 -20 -20 -22
+4 -86 44 -117 139 -182 265 -182 124 0 209 56 263 173 21 46 24 63 20 135 -5
+93 -21 131 -81 194 -70 72 -195 102 -288 67z"/>
+</g></svg></span><b>Cerablus</b></span>
+  <nav class="navlinks"><a href="#menu">Menu</a><a href="#how">How it works</a><a href="#">Visit</a></nav>
+  <a class="navbtn" href="#">اطلب الآن</a>
+</div></div></header>
+
+<section class="hero wrap">
+  <span class="pill"><span class="d"></span> محمّصة طازة · نابلس</span>
+  <h1>Coffee, <span class="g">made</span><br>the way you like.</h1>
+  <p>قهوة مختصّة وحلويات طازة. تصفّح القائمة، أضف للسلة، وابعت طلبك عبر واتساب بضغطة وحدة.</p>
+  <div class="hero-actions">
+    <a class="btn fill" href="#menu">تصفّح المنيو</a>
+    <a class="btn soft en" href="#how">How it works</a>
+  </div>
+</section>
+
+<section class="feat wrap" id="menu">
+  <div class="fhead"><h2>Popular now</h2><a href="#">كل القائمة ←</a></div>
+  <div class="cards">
+    <div class="card"><div class="ph">☕</div><div class="b"><div><h3>Cappuccino</h3><div class="ar">كابتشينو</div></div><span class="pr en">13₪</span></div></div>
+    <div class="card"><div class="ph">🧊</div><div class="b"><div><h3>Iced Coffee</h3><div class="ar">آيس كوفي</div></div><span class="pr en">15₪</span></div></div>
+    <div class="card"><div class="ph">🍓</div><div class="b"><div><h3>Smoothie</h3><div class="ar">سموذي فراولة</div></div><span class="pr en">14₪</span></div></div>
+    <div class="card"><div class="ph">🍰</div><div class="b"><div><h3>Kunafa</h3><div class="ar">كنافة</div></div><span class="pr en">18₪</span></div></div>
+  </div>
+</section>
+
+<section class="how wrap" id="how">
+  <div class="how-grid">
+    <div class="step"><div class="n en">1</div><h3>اختَر</h3><p>تصفّح القائمة وأضف اللي بتحبّه للسلة.</p></div>
+    <div class="step"><div class="n en">2</div><h3>أرسل</h3><p>سلّتك تتحوّل لرسالة واتساب جاهزة.</p></div>
+    <div class="step"><div class="n en">3</div><h3>استلم</h3><p>الكافيه يجهّز طلبك طازة.</p></div>
+  </div>
+</section>
+
+<div class="wrap"><div class="cta-band">
+  <div class="cmark"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 158.000000 229.000000" fill="currentColor" aria-hidden="true"><g transform="translate(0.000000,229.000000) scale(0.100000,-0.100000)"
+fill="currentColor" stroke="none">
+<path d="M992 2157 c-13 -7 -33 -28 -45 -47 -12 -19 -30 -45 -39 -59 -20 -30
+-38 -68 -38 -82 0 -5 -7 -9 -15 -9 -10 0 -15 -10 -15 -30 0 -17 -9 -48 -20
+-70 -18 -35 -23 -38 -52 -34 -57 7 -412 34 -457 34 -34 0 -49 -6 -72 -29 -25
+-26 -29 -37 -29 -85 0 -51 -2 -56 -25 -62 -48 -12 -65 -48 -65 -136 0 -92 9
+-115 55 -134 51 -21 1049 -21 1100 0 46 19 55 42 55 133 0 86 -13 117 -56 133
+-17 7 -24 17 -24 35 0 14 -10 36 -23 49 -25 25 -53 31 -199 42 -49 3 -88 10
+-88 15 0 5 7 9 15 9 9 0 20 11 25 25 5 14 14 25 20 25 5 0 10 9 10 19 0 10 6
+21 14 24 9 3 12 14 9 25 -3 12 1 22 11 25 9 4 16 16 16 27 0 11 6 20 13 20 7
+0 80 -43 162 -96 162 -104 182 -109 210 -54 24 46 19 67 -22 93 -79 49 -380
+207 -394 207 -8 -1 -24 -6 -37 -13z m226 -108 c92 -51 168 -93 170 -94 1 -1
+-5 -18 -15 -36 -10 -19 -19 -35 -20 -37 -1 -2 -62 35 -137 83 -85 55 -142 85
+-152 81 -8 -3 -28 1 -43 9 -42 21 -46 6 -9 -28 33 -30 33 -30 10 -40 -12 -6
+-22 -19 -22 -29 0 -18 -1 -19 -30 -2 -42 25 -51 8 -11 -23 42 -33 23 -49 -25
+-21 -27 16 -34 17 -34 6 0 -8 11 -21 25 -28 14 -7 25 -20 25 -28 0 -10 -8 -9
+-34 8 -40 24 -60 10 -22 -15 36 -24 24 -41 -24 -37 -22 2 -40 6 -40 8 0 3 9
+22 20 44 11 22 20 46 20 55 0 8 5 15 10 15 6 0 10 8 10 18 0 9 7 25 14 35 12
+15 18 16 35 8 11 -6 24 -11 30 -11 20 0 11 20 -14 32 -28 12 -33 36 -10 44 8
+3 23 21 34 40 15 25 27 34 46 34 14 0 101 -41 193 -91z m212 -142 c0 -13 -9
+-32 -20 -42 -18 -17 -20 -17 -26 -1 -4 10 -2 28 4 42 15 31 42 32 42 1z"/>
+<path d="M675 1299 c-126 -21 -235 -78 -331 -173 -113 -113 -164 -241 -164
+-411 0 -169 50 -295 164 -410 170 -172 440 -230 681 -147 86 30 203 104 231
+146 14 23 12 26 -51 86 -103 99 -100 98 -143 58 -78 -73 -165 -103 -276 -96
+-211 14 -346 172 -334 391 6 107 38 177 114 246 130 119 336 122 485 7 l57
+-44 83 79 84 79 -55 51 c-128 118 -342 172 -545 138z"/>
+<path d="M739 985 c-90 -33 -138 -86 -109 -120 17 -20 32 -19 81 7 116 60 234
+-8 232 -133 -2 -159 -212 -217 -304 -83 -32 47 -57 55 -83 28 -20 -20 -20 -22
+4 -86 44 -117 139 -182 265 -182 124 0 209 56 263 173 21 46 24 63 20 135 -5
+93 -21 131 -81 194 -70 72 -195 102 -288 67z"/>
+</g></svg></div>
+  <h2>Your order, one tap away.</h2>
+  <a class="btn gold" href="#">اطلب عبر واتساب</a>
+</div></div>
+
+<footer>Cerablus Coffee · Daily 9AM–11PM · Nablus · © 2026</footer>
+</body>
+</html>

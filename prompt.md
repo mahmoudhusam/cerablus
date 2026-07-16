@@ -1,0 +1,3 @@
+you did a good job so far but im looking for something different, the designs you gave me all have that arabic eastern vibe in it, I get that the language site in arabic this might give you that i want something like that, its good but its ok how about you give me more designs anew 3 designs that represent something deferent clean modern stuff, make sure to do your research on it and look for other websites that do the same thing and use these good top websites to come up with something more creative and butifulle, show me your best work on this i need your best performance on this, bro this is why im using Claude because your the best show mw that im right
+
+and if you like you could also give me a claude code prompt to create a good design 
