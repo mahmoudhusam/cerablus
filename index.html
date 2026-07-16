@@ -32,7 +32,7 @@
   .top .hint{margin-top:1rem;font-size:.85rem;color:var(--soft)}
 
   /* grid */
-  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.4rem;padding:1.5rem 0 4rem}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:1.4rem;padding:1.5rem 0 4rem}
   .card{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:var(--shadow);transition:transform .22s ease,box-shadow .22s ease}
   .card:hover{transform:translateY(-5px);box-shadow:0 24px 50px rgba(20,32,26,.13)}
   .thumb{aspect-ratio:16/10;position:relative;overflow:hidden;display:grid;place-items:center;padding:1.3rem;text-align:center}
