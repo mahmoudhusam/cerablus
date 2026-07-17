@@ -41,7 +41,7 @@ Modern, minimal, confident — in the spirit of current Awwwards minimal winners
 - Brand colors used **sparingly** against light/neutral backgrounds.
 - Motion is subtle and meaningful: gentle hover shifts, scroll-reveal via `IntersectionObserver`.
 - **Avoid** heritage/"eastern" ornamentation. Keep it clean and contemporary.
-- The current front-runner directions are **F (type-led)**, **G (editorial)**, and **H (soft/product)** — match whichever the client picks.
+- The current front-runner directions are **A (Grove / الدافئ)**, **E (Homestead / الحِرفي)**, **C (Fresh / العصري)**, and **B (Roastery / الفخم)** — match whichever the client picks.
 
 ## Data model
 Menu content lives in `data/menu.js` as `window.MENU`. Schema mirrors the client intake sheet:

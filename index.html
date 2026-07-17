@@ -26,7 +26,7 @@
   .top{text-align:center;padding:clamp(2.5rem,7vw,5rem) 0 clamp(1.5rem,4vw,2.5rem)}
   .top .mark{width:64px;height:64px;border-radius:18px;background:var(--pine);display:grid;place-items:center;margin:0 auto 1.4rem}
   .top .mark .cmark{height:36px;color:var(--gold)}
-  .top .pill{display:inline-block;background:var(--card);border:1px solid var(--line);border-radius:100px;padding:.35rem 1rem;font-family:var(--f);font-size:.8rem;color:var(--soft);box-shadow:var(--shadow);margin-bottom:1.2rem}
+  .top .pill{display:inline-block;background:var(--card);border:1px solid var(--line);border-radius:100px;padding:.35rem 1rem;font-family:var(--f-ar);font-size:.8rem;color:var(--soft);box-shadow:var(--shadow);margin-bottom:1.2rem}
   .top h1{font-family:var(--f);font-weight:800;font-size:clamp(2rem,6vw,3.4rem);letter-spacing:-.03em;margin-bottom:.6rem}
   .top p{color:var(--soft);max-width:52ch;margin:0 auto}
   .top .hint{margin-top:1rem;font-size:.85rem;color:var(--soft)}
@@ -36,12 +36,9 @@
   .card{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:var(--shadow);transition:transform .22s ease,box-shadow .22s ease}
   .card:hover{transform:translateY(-5px);box-shadow:0 24px 50px rgba(20,32,26,.13)}
   .thumb{aspect-ratio:16/10;position:relative;overflow:hidden;display:grid;place-items:center;padding:1.3rem;text-align:center}
-  .thumb .lbl{position:absolute;inset-block-start:.8rem;inset-inline-start:.8rem;font-family:var(--f);font-weight:700;font-size:.72rem;letter-spacing:.06em;padding:.28rem .6rem;border-radius:6px;background:rgba(0,0,0,.16);color:#fff;backdrop-filter:blur(4px)}
   .thumb .mini{font-family:var(--f);font-weight:800;letter-spacing:-.02em;line-height:1.05}
-  .thumb .minisub{font-size:.72rem;margin-top:.4rem;opacity:.8}
   .body{padding:1rem 1.2rem 1.3rem;display:flex;flex-direction:column;gap:.5rem;flex:1}
-  .body h3{font-family:var(--f);font-weight:700;font-size:1.15rem;display:flex;align-items:center;gap:.5rem}
-  .body .tag{font-family:var(--f-ar);font-weight:600;font-size:.72rem;color:var(--green);background:var(--mint);padding:.15rem .55rem;border-radius:100px}
+  .body h3{font-family:var(--f-ar);font-weight:700;font-size:1.15rem;display:flex;align-items:center;gap:.5rem}
   .body p{font-size:.9rem;color:var(--soft);flex:1}
   .body .open{display:inline-flex;align-items:center;gap:.4rem;font-family:var(--f-ar);font-weight:600;color:var(--pine);font-size:.9rem;margin-top:.3rem}
   .card:hover .open{gap:.7rem}
@@ -50,26 +47,9 @@
   .t-grove{background:var(--mint);color:var(--pine)}
   .t-roastery{background:var(--pine);color:var(--gold)}
   .t-fresh{background:#fff;color:var(--pine);border-bottom:4px solid var(--green)}
-  .t-split{background:linear-gradient(90deg,var(--pine) 50%,var(--mint) 50%);color:#fff}
-  .t-split .mini{color:var(--gold)}
   .t-home{background:#f5efe2;color:var(--pine);background-image:radial-gradient(rgba(12,61,38,.06) 1px,transparent 1px);background-size:14px 14px}
-  .t-type{background:#fbfbf9;color:var(--ink)}
-  .t-type .mini{font-weight:500}
-  .t-type .mini em{color:var(--green);font-style:italic}
-  .t-editorial{background:#f4f3ee;color:var(--pine)}
-  .t-editorial .mini{font-family:Georgia,serif;font-weight:400;font-style:italic}
-  .t-soft{background:linear-gradient(160deg,var(--mint),#d5e6dc);color:var(--pine)}
-  /* new directions I·J·K */
-  .t-studio{background:#f4f3ee;color:var(--pine);background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:26px 26px}
-  .t-studio .mini{font-weight:500}
-  .t-canvas{background:var(--pine);color:var(--mint)}
-  .t-canvas .mini{color:var(--mint)}
-  .t-canvas .mini em{color:var(--gold);font-style:italic}
-  .t-bento{background:linear-gradient(150deg,var(--mint),#d6e6dd);color:var(--pine)}
-  /* "new" badge */
-  .tag.new{background:var(--pine);color:var(--gold)}
 
-  footer{border-top:1px solid var(--line);padding:2rem 0 3rem;text-align:center;color:var(--soft);font-family:var(--f);font-size:.85rem}
+  footer{border-top:1px solid var(--line);padding:2rem 0 3rem;text-align:center;color:var(--soft);font-family:var(--f-ar);font-size:.85rem}
 </style>
 </head>
 <body>
@@ -106,74 +86,39 @@ fill="currentColor" stroke="none">
 4 -86 44 -117 139 -182 265 -182 124 0 209 56 263 173 21 46 24 63 20 135 -5
 93 -21 131 -81 194 -70 72 -195 102 -288 67z"/>
 </g></svg></span></div>
-  <div class="pill en">Design Directions · 2026</div>
+  <div class="pill">اتجاهات التصميم · ٢٠٢٦</div>
   <h1>Cerablus Coffee</h1>
-  <p>اتجاهات تصميم مختلفة للموقع — نفس الهوية والألوان، بأنماط بصرية متنوّعة. البداية مع ثلاثة اتجاهات جديدة نظيفة وعصرية (I · J · K). افتح أي واحد لتجربته كامل، واختر الأقرب لروح المكان.</p>
+  <p>أربعة اتجاهات تصميم للموقع — نفس الهوية والألوان، بأنماط بصرية متنوّعة. افتح أي واحد لتجربته بالكامل، واختر الأقرب لروح المكان.</p>
   <div class="hint">👆 اضغط على أي تصميم لتصفّحه بالكامل</div>
 </header>
 
 <main class="wrap">
   <div class="grid">
 
-    <a class="card" href="cerablus-I-studio.html">
-      <div class="thumb t-studio"><span class="lbl">I</span><div><div class="mini" style="font-size:1.7rem">Coffee,<br>measured.</div><div class="minisub">Studio · Swiss / technical</div></div></div>
-      <div class="body"><h3>Studio <span class="tag new">جديد</span></h3><p>كتالوج دقيق بأرقام فهرسة وخطوط رفيعة وطباعة مونو. نظيف، هندسي، وواثق.</p><span class="open">تصفّح ←</span></div>
-    </a>
-
-    <a class="card" href="cerablus-J-canvas.html">
-      <div class="thumb t-canvas"><span class="lbl">J</span><div><div class="mini" style="font-size:1.9rem">A cup worth<br><em>slowing</em> for.</div><div class="minisub">Canvas · colour-field</div></div></div>
-      <div class="body"><h3>Canvas <span class="tag new">جديد</span></h3><p>واجهة خضراء كاملة بطباعة عملاقة وخط ذهبي واحد. جريء، فخم، ومساحات واسعة.</p><span class="open">تصفّح ←</span></div>
-    </a>
-
-    <a class="card" href="cerablus-K-bento.html">
-      <div class="thumb t-bento"><span class="lbl">K</span><div><div class="mini" style="font-size:1.9rem">Laid out<br>beautifully.</div><div class="minisub">Bento · image grid</div></div></div>
-      <div class="body"><h3>Bento <span class="tag new">جديد</span></h3><p>شبكة بطاقات غير متماثلة موجّهة للصور، مع أماكن جاهزة لصور المنتجات الحقيقية.</p><span class="open">تصفّح ←</span></div>
-    </a>
-
-    <a class="card" href="cerablus-F-type.html">
-      <div class="thumb t-type"><span class="lbl">F</span><div><div class="mini" style="font-size:1.7rem">Good coffee,<br>made <em>simple.</em></div><div class="minisub">Type-led · oversized</div></div></div>
-      <div class="body"><h3>Type <span class="tag">الأبرز</span></h3><p>الطباعة الكبيرة تحمل الصفحة كاملة. جريء وعصري جدًا — أقرب لمواقع الجوائز.</p><span class="open">تصفّح ←</span></div>
-    </a>
-
-    <a class="card" href="cerablus-G-editorial.html">
-      <div class="thumb t-editorial"><span class="lbl">G</span><div><div class="mini" style="font-size:1.7rem">The daily<br>ritual.</div><div class="minisub">Editorial · magazine</div></div></div>
-      <div class="body"><h3>Editorial <span class="tag">راقٍ</span></h3><p>تخطيط مجلة أنيق بخط Serif ونظام شبكي محكم. هادئ، ذكي، وفخم.</p><span class="open">تصفّح ←</span></div>
-    </a>
-
-    <a class="card" href="cerablus-H-soft.html">
-      <div class="thumb t-soft"><span class="lbl">H</span><div><div class="mini" style="font-size:1.7rem">Made the<br>way you like.</div><div class="minisub">Soft · product-style</div></div></div>
-      <div class="body"><h3>Soft <span class="tag">عملي</span></h3><p>بطاقات ناعمة وظلال خفيفة وشريط تنقّل عائم. الأسهل للتنفيذ مباشرة.</p><span class="open">تصفّح ←</span></div>
-    </a>
-
-    <a class="card" href="cerablus-B-roastery.html">
-      <div class="thumb t-roastery"><span class="lbl">B</span><div><div class="mini" style="font-family:Georgia,serif;font-size:2.4rem">Cerablus</div><div class="minisub">Dark · premium</div></div></div>
-      <div class="body"><h3>Roastery <span class="tag">فخم</span></h3><p>خلفية خضراء غامقة وشعار ذهبي. الأكثر تميّزًا وإحساسًا بالرقيّ.</p><span class="open">تصفّح ←</span></div>
-    </a>
-
-    <a class="card" href="cerablus-D-split.html">
-      <div class="thumb t-split"><span class="lbl">D</span><div><div class="mini" style="font-size:1.9rem">Split</div><div class="minisub">Editorial + marquee</div></div></div>
-      <div class="body"><h3>Split <span class="tag">جريء</span></h3><p>شاشة مقسومة مع شريط متحرك وقائمة رقمية. عصري وموجّه للأزياء.</p><span class="open">تصفّح ←</span></div>
-    </a>
-
     <a class="card" href="cerablus-A-grove.html">
-      <div class="thumb t-grove"><span class="lbl">A</span><div><div class="mini" style="font-family:Georgia,serif;font-size:2.2rem">Grove</div><div class="minisub">Light · welcoming</div></div></div>
-      <div class="body"><h3>Grove</h3><p>خلفية فاتحة، بطاقات مستديرة، وأزرار ذهبية. دافئ ومريح للجميع.</p><span class="open">تصفّح ←</span></div>
-    </a>
-
-    <a class="card" href="cerablus-C-fresh.html">
-      <div class="thumb t-fresh"><span class="lbl">C</span><div><div class="mini" style="font-size:2rem">Fresh</div><div class="minisub">Bold · modern retail</div></div></div>
-      <div class="body"><h3>Fresh</h3><p>كتل خضراء جريئة وخط عريض. حيوي وعصري وموجّه للفئة الشابة.</p><span class="open">تصفّح ←</span></div>
+      <div class="thumb t-grove"><div><div class="mini" style="font-family:var(--f-ar);font-size:2rem">الدافئ</div></div></div>
+      <div class="body"><h3>الدافئ</h3><p>تصميم فاتح ومرحّب، بطاقات مستديرة وأجواء ناعمة.</p><span class="open">تصفّح ←</span></div>
     </a>
 
     <a class="card" href="cerablus-E-homestead.html">
-      <div class="thumb t-home"><span class="lbl">E</span><div><div class="mini" style="font-family:Georgia,serif;font-size:2.1rem">Homestead</div><div class="minisub">Warm · handcrafted</div></div></div>
-      <div class="body"><h3>Homestead</h3><p>ملمس ورقي وخطوط مكتوبة بخط اليد وختم دائري. حِرفي ودافئ.</p><span class="open">تصفّح ←</span></div>
+      <div class="thumb t-home"><div><div class="mini" style="font-family:var(--f-ar);font-size:2rem">الحِرفي</div></div></div>
+      <div class="body"><h3>الحِرفي</h3><p>ملمس دافئ ولمسات مكتوبة بخط اليد وطابع بيتي.</p><span class="open">تصفّح ←</span></div>
+    </a>
+
+    <a class="card" href="cerablus-C-fresh.html">
+      <div class="thumb t-fresh"><div><div class="mini" style="font-family:var(--f-ar);font-size:2rem">العصري</div></div></div>
+      <div class="body"><h3>العصري</h3><p>كتل خضراء جريئة وخط عريض، حيوي وشبابي.</p><span class="open">تصفّح ←</span></div>
+    </a>
+
+    <a class="card" href="cerablus-B-roastery.html">
+      <div class="thumb t-roastery"><div><div class="mini" style="font-family:var(--f-ar);font-size:2rem">الفخم</div></div></div>
+      <div class="body"><h3>الفخم</h3><p>خلفية خضراء غامقة وشعار ذهبي، إحساس راقٍ.</p><span class="open">تصفّح ←</span></div>
     </a>
 
   </div>
 </main>
 
-<footer>Cerablus Coffee — Design Directions · اختر تصميمًا وأخبرني بالحرف · 2026</footer>
+<footer>Cerablus Coffee — اتجاهات التصميم · اختر تصميمًا وأخبرني به · ٢٠٢٦</footer>
 
 </body>
 </html>

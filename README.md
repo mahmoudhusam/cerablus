@@ -6,17 +6,16 @@ Plain static HTML/CSS/JS. No build step, no framework — every file opens direc
 
 ## Design directions
 
-Open [`index.html`](index.html) for the gallery. Each direction is one self-contained page.
+Open [`index.html`](index.html) for the gallery. Each direction is one self-contained, Arabic/RTL page.
 
-Newest (clean, modern, Awwwards-minimal — no heritage styling):
+Four directions are on the table for client review:
 
-| | Direction | Language |
+| | التصميم | الوصف |
 |---|---|---|
-| **I** | [Studio](cerablus-I-studio.html) | Swiss/technical catalog — monospace meta, index numbers, hairline rules |
-| **J** | [Canvas](cerablus-J-canvas.html) | Full-bleed pine color-field hero, oversized type |
-| **K** | [Bento](cerablus-K-bento.html) | Asymmetric image-led grid with placeholder tiles for real photos |
-
-Earlier explorations: A `Grove`, B `Roastery`, C `Fresh`, D `Split`, E `Homestead`, F `Type`, G `Editorial`, H `Soft`.
+| **A** | [الدافئ](cerablus-A-grove.html) | تصميم فاتح ومرحّب، بطاقات مستديرة وأجواء ناعمة. |
+| **E** | [الحِرفي](cerablus-E-homestead.html) | ملمس دافئ ولمسات مكتوبة بخط اليد وطابع بيتي. |
+| **C** | [العصري](cerablus-C-fresh.html) | كتل خضراء جريئة وخط عريض، حيوي وشبابي. |
+| **B** | [الفخم](cerablus-B-roastery.html) | خلفية خضراء غامقة وشعار ذهبي، إحساس راقٍ. |
 
 ## Brand
 
