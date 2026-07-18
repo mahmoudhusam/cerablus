@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Cerablus Coffee — الاتجاه ب (Roastery)</title>
+<script>document.documentElement.classList.add('js')</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Aref+Ruqaa:wght@400;700&display=swap" rel="stylesheet">
@@ -13,7 +14,15 @@
     --f-body:"IBM Plex Sans Arabic",sans-serif; --f-word:"Cormorant Garamond",serif; --f-ruqaa:"Aref Ruqaa",serif;
   }
   *{margin:0;padding:0;box-sizing:border-box}
-  body{font-family:var(--f-body);color:var(--mint);background:var(--pine);line-height:1.75;-webkit-font-smoothing:antialiased}
+  /* depth: layered radials give the dark green a lit-from-top glow + edge vignette
+     so the page reads as a space, not a flat block */
+  body{font-family:var(--f-body);color:var(--mint);line-height:1.75;-webkit-font-smoothing:antialiased;
+    background-color:var(--pine);
+    background-image:
+      radial-gradient(120% 72% at 50% -12%, rgba(0,102,57,.55), rgba(0,102,57,0) 55%),
+      radial-gradient(100% 60% at 50% 116%, rgba(205,160,95,.10), rgba(205,160,95,0) 55%),
+      radial-gradient(150% 105% at 50% 42%, rgba(6,32,20,0) 58%, rgba(4,24,15,.7));
+    background-repeat:no-repeat;background-attachment:fixed}
   a{text-decoration:none;color:inherit}
   img{max-width:100%;display:block}
   .wrap{width:min(100% - 2.4rem,1080px);margin-inline:auto}
@@ -35,26 +44,40 @@
     radial-gradient(ellipse at 50% 0%,rgba(0,102,57,.5),transparent 55%),
     radial-gradient(ellipse at 50% 120%,rgba(205,160,95,.14),transparent 50%)}
   .hero .in{position:relative;z-index:2}
-  .hero .est{font-family:var(--f-body);letter-spacing:.5em;font-size:.72rem;color:var(--gold-soft);margin-bottom:1.6rem}
-  .rule{width:60px;height:1px;background:var(--gold);margin:1.4rem auto}
+  .hero .est{font-family:var(--f-body);letter-spacing:.55em;font-size:.72rem;color:var(--gold-soft);margin-bottom:1.9rem}
+  /* thin gold rule; .top variant opens the hero above the kicker */
+  .rule{display:block;width:60px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:1.5rem auto}
+  .rule.top{width:44px;margin:0 auto 1.6rem}
+  .hero .logo-full{filter:drop-shadow(0 10px 34px rgba(205,160,95,.16))}
   .hero h1{font-family:var(--f-word);font-weight:600;font-size:clamp(4rem,15vw,9rem);color:var(--gold);line-height:.95;letter-spacing:.02em}
-  .hero .ar{font-family:var(--f-ruqaa);font-size:clamp(1.4rem,4vw,2.2rem);color:var(--mint);margin-top:.4rem}
-  .hero .lede{max-width:40ch;margin:1.6rem auto 2.2rem;color:rgba(233,244,238,.72);font-size:1.05rem}
+  .hero .ar{font-family:var(--f-ruqaa);font-size:clamp(1.4rem,4vw,2.2rem);color:var(--mint);margin-top:.7rem}
+  .hero .lede{max-width:40ch;margin:1.8rem auto 2.4rem;color:rgba(233,244,238,.72);font-size:1.05rem}
   .btn-gold{background:var(--gold);color:var(--pine);padding:.95rem 2.4rem;border-radius:2px;font-weight:700;font-family:var(--f-body);letter-spacing:.02em;transition:.25s;display:inline-block}
   .btn-gold:hover{background:var(--gold-soft)}
 
-  /* menu — elegant list */
-  .section{padding:clamp(3rem,8vw,5.5rem) 0}
+  /* menu — elegant list; a centered fading gold hairline opens each section */
+  .section{padding:clamp(3rem,8vw,5.5rem) 0;position:relative}
+  .section::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:min(100% - 2.4rem,1080px);height:1px;background:linear-gradient(90deg,transparent,rgba(205,160,95,.42),transparent)}
   .sec-title{text-align:center;margin-bottom:3rem}
   .sec-title .k{font-family:var(--f-body);letter-spacing:.4em;font-size:.7rem;color:var(--gold-soft);margin-bottom:.8rem}
   .sec-title h2{font-family:var(--f-word);font-size:clamp(2.4rem,6vw,3.6rem);color:var(--gold)}
   .menu-list{max-width:720px;margin-inline:auto}
-  .mrow{display:flex;align-items:baseline;gap:1rem;padding:1.15rem 0;border-bottom:1px solid rgba(205,160,95,.16)}
-  .mrow .n{font-family:var(--f-word);font-size:1.5rem;color:var(--mint);white-space:nowrap}
+  .mrow{display:flex;align-items:center;gap:1rem;padding:1.05rem 0;border-bottom:1px solid rgba(205,160,95,.16)}
+  /* small refined thumbnail; pine-deep sits behind the img as a graceful fallback */
+  .mrow .thumb{width:56px;height:56px;flex:none;border-radius:8px;object-fit:cover;background:var(--pine-deep);border:1px solid rgba(205,160,95,.3);transition:border-color .25s ease}
+  .mrow:hover .thumb{border-color:var(--gold)}
+  .mrow:hover .n{color:var(--gold-soft)}
+  .mrow .n{font-family:var(--f-word);font-size:1.5rem;color:var(--mint);white-space:nowrap;transition:color .25s ease}
   .mrow .d{flex:1;color:rgba(233,244,238,.55);font-size:.9rem}
-  .mrow .dots{flex:1;border-bottom:1px dotted rgba(205,160,95,.35);transform:translateY(-5px)}
+  .mrow .dots{flex:1;border-bottom:1px dotted rgba(205,160,95,.35);transform:translateY(-4px)}
   .mrow .p{font-family:var(--f-word);font-size:1.5rem;color:var(--gold);font-weight:600;white-space:nowrap}
   .mrow .tag{font-family:var(--f-body);font-size:.62rem;color:var(--pine);background:var(--gold);padding:.1rem .5rem;border-radius:2px;font-weight:700;margin-inline-start:.5rem}
+
+  /* scroll-reveal — only hides when JS is on (.js), so no-JS users see everything;
+     fully disabled for reduced-motion */
+  .js .reveal{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease}
+  .js .reveal.is-in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1 !important;transform:none !important;transition:none}}
 
   /* feature band */
   .band{text-align:center;border-block:1px solid rgba(205,160,95,.2);padding:clamp(2.5rem,6vw,4rem) 0;background:var(--pine-deep)}
@@ -118,8 +141,9 @@ fill="currentColor" stroke="none">
 
 <section class="hero">
   <div class="wrap in">
+    <span class="rule top"></span>
     <div class="est">SPECIALTY · COFFEE · ROASTERY</div>
-    <div class="logo-full" style="margin:0 auto;width:min(300px,72vw);color:var(--gold)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 356.000000 342.000000" fill="currentColor" aria-hidden="true"><g transform="translate(0.000000,342.000000) scale(0.100000,-0.100000)"
+    <div class="logo-full" style="margin:0 auto;width:min(360px,80vw);color:var(--gold)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 356.000000 342.000000" fill="currentColor" aria-hidden="true"><g transform="translate(0.000000,342.000000) scale(0.100000,-0.100000)"
 fill="currentColor" stroke="none">
 <path d="M1982 3287 c-13 -7 -33 -28 -45 -47 -12 -19 -30 -45 -39 -59 -20 -30
 -38 -68 -38 -82 0 -5 -7 -9 -15 -9 -10 0 -15 -10 -15 -30 0 -17 -9 -48 -20
@@ -211,20 +235,20 @@ c51 0 65 3 65 15 0 12 -16 15 -80 15 l-80 0 0 -140z"/>
 
 <section class="section" id="menu">
   <div class="wrap">
-    <div class="sec-title"><div class="k">OUR SELECTION</div><h2>من قائمتنا</h2></div>
+    <div class="sec-title reveal"><div class="k">OUR SELECTION</div><h2>من قائمتنا</h2></div>
     <div class="menu-list">
-      <div class="mrow"><span class="n">كابتشينو</span><span class="dots"></span><span class="p">13 ₪</span></div>
-      <div class="mrow"><span class="n">كافيه لاتيه</span><span class="dots"></span><span class="p">14 ₪</span></div>
-      <div class="mrow"><span class="n">آيس كوفي<span class="tag">مميّز</span></span><span class="dots"></span><span class="p">15 ₪</span></div>
-      <div class="mrow"><span class="n">كنافة</span><span class="dots"></span><span class="p">18 ₪</span></div>
-      <div class="mrow"><span class="n">تشيز كيك</span><span class="dots"></span><span class="p">16 ₪</span></div>
-      <div class="mrow"><span class="n">وافل بلجيكي</span><span class="dots"></span><span class="p">20 ₪</span></div>
+      <div class="mrow reveal"><img class="thumb" src="assets/menu/cappuccino.jpg" alt="كابتشينو" loading="lazy"><span class="n">كابتشينو</span><span class="dots"></span><span class="p">13 ₪</span></div>
+      <div class="mrow reveal"><img class="thumb" src="assets/menu/latte.jpg" alt="كافيه لاتيه" loading="lazy"><span class="n">كافيه لاتيه</span><span class="dots"></span><span class="p">14 ₪</span></div>
+      <div class="mrow reveal"><img class="thumb" src="assets/menu/iced-coffee.jpg" alt="آيس كوفي" loading="lazy"><span class="n">آيس كوفي<span class="tag">مميّز</span></span><span class="dots"></span><span class="p">15 ₪</span></div>
+      <div class="mrow reveal"><img class="thumb" src="assets/menu/kunafa.jpg" alt="كنافة" loading="lazy"><span class="n">كنافة</span><span class="dots"></span><span class="p">18 ₪</span></div>
+      <div class="mrow reveal"><img class="thumb" src="assets/menu/cheesecake.jpg" alt="تشيز كيك" loading="lazy"><span class="n">تشيز كيك</span><span class="dots"></span><span class="p">16 ₪</span></div>
+      <div class="mrow reveal"><img class="thumb" src="assets/menu/waffle.jpg" alt="وافل بلجيكي" loading="lazy"><span class="n">وافل بلجيكي</span><span class="dots"></span><span class="p">20 ₪</span></div>
     </div>
   </div>
 </section>
 
 <section class="band">
-  <div class="wrap"><div class="ar">من الحبّة… لفنجانك</div></div>
+  <div class="wrap"><div class="ar reveal">من الحبّة… لفنجانك</div></div>
 </section>
 
 <footer>
@@ -264,6 +288,23 @@ fill="currentColor" stroke="none">
     <a class="wa" href="#">اطلب الآن عبر واتساب</a>
   </div>
 </footer>
+
+<script>
+  /* subtle scroll-reveal; skipped entirely when the user prefers reduced motion */
+  (function(){
+    var els = document.querySelectorAll('.reveal');
+    if(!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+      els.forEach(function(el){ el.classList.add('is-in'); });
+      return;
+    }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){ e.target.classList.add('is-in'); io.unobserve(e.target); }
+      });
+    }, {threshold:.12, rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(el){ io.observe(el); });
+  })();
+</script>
 
 </body>
 </html>

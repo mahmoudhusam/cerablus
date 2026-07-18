@@ -58,7 +58,10 @@
   .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:1.2rem}
   .c{background:var(--cream);border:2px dashed rgba(12,61,38,.22);border-radius:18px;padding:1.1rem;display:flex;gap:1rem;align-items:center;transition:.2s}
   .c:hover{border-style:solid;border-color:var(--gold);transform:translateY(-3px)}
-  .c .ic{width:56px;height:56px;flex:none;border-radius:50%;background:var(--paper);display:grid;place-items:center;font-size:1.6rem;border:1.5px solid rgba(12,61,38,.12)}
+  .c .ic{width:60px;height:60px;flex:none;border-radius:50%;background:var(--paper);display:grid;place-items:center;font-size:1.6rem;border:1.5px solid rgba(12,61,38,.12);overflow:hidden;position:relative}
+  /* real photo fills the round tile; paper stays behind as a graceful fallback */
+  .c .ic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .c:hover .ic{border-color:var(--gold)}
   .c .info{flex:1}
   .c h3{font-family:var(--f-disp);font-weight:600;font-size:1.2rem;color:var(--pine)}
   .c p{font-size:.82rem;color:var(--soft)}
@@ -242,10 +245,10 @@ c51 0 65 3 65 15 0 12 -16 15 -80 15 l-80 0 0 -140z"/>
     <h2>قائمتنا</h2>
   </div>
   <div class="cards">
-    <div class="c"><div class="ic">☕</div><div class="info"><h3>كابتشينو</h3><p>رغوة حليب كثيفة على إسبريسو.</p></div><span class="pr">13 ₪</span></div>
-    <div class="c"><div class="ic">🧊</div><div class="info"><h3>آيس كوفي <span class="fav">★ مميّز</span></h3><p>قهوة مثلجة منعشة.</p></div><span class="pr">15 ₪</span></div>
-    <div class="c"><div class="ic">🍰</div><div class="info"><h3>كنافة</h3><p>كنافة بالجبنة مع قطر.</p></div><span class="pr">18 ₪</span></div>
-    <div class="c"><div class="ic">🥐</div><div class="info"><h3>كرواسون جبنة</h3><p>طازج من الفرن كل صباح.</p></div><span class="pr">12 ₪</span></div>
+    <div class="c"><div class="ic"><img src="assets/menu/cappuccino.jpg" alt="كابتشينو" loading="lazy"></div><div class="info"><h3>كابتشينو</h3><p>رغوة حليب كثيفة على إسبريسو.</p></div><span class="pr">13 ₪</span></div>
+    <div class="c"><div class="ic"><img src="assets/menu/iced-coffee.jpg" alt="آيس كوفي" loading="lazy"></div><div class="info"><h3>آيس كوفي <span class="fav">★ مميّز</span></h3><p>قهوة مثلجة منعشة.</p></div><span class="pr">15 ₪</span></div>
+    <div class="c"><div class="ic"><img src="assets/menu/kunafa.jpg" alt="كنافة" loading="lazy"></div><div class="info"><h3>كنافة</h3><p>كنافة بالجبنة مع قطر.</p></div><span class="pr">18 ₪</span></div>
+    <div class="c"><div class="ic"><img src="assets/menu/croissant.jpg" alt="كرواسون جبنة" loading="lazy"></div><div class="info"><h3>كرواسون جبنة</h3><p>طازج من الفرن كل صباح.</p></div><span class="pr">12 ₪</span></div>
   </div>
 </section>
 
